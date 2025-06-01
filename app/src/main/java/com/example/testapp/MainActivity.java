@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,5 +47,8 @@ public class MainActivity extends AppCompatActivity {
         phoneList.add(new Phone(3, "Samir","06073830900"));
 
         PhoneBookAdapter phoneBookAdapter = new PhoneBookAdapter(phoneList);
+        RecyclerView rvNumbers = findViewById(R.id.rv_numbers);
+        rvNumbers.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false));
+        rvNumbers.setAdapter(phoneBookAdapter);
     }
 }
