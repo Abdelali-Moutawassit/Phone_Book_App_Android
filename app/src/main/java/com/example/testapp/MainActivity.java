@@ -8,6 +8,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,5 +23,27 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        List<Phone> phoneList = new ArrayList<>();
+        phoneList.add(new Phone(1, "Abdelali","0607080900"));
+        phoneList.add(new Phone(2, "Ahmed","0607080988"));
+        phoneList.add(new Phone(3, "Samir","06073830900"));
+        phoneList.add(new Phone(1, "Abdelali","0607080900"));
+        phoneList.add(new Phone(2, "Ahmed","0607080988"));
+        phoneList.add(new Phone(3, "Samir","06073830900"));
+        phoneList.add(new Phone(1, "Abdelali","0607080900"));
+        phoneList.add(new Phone(2, "Ahmed","0607080988"));
+        phoneList.add(new Phone(3, "Samir","06073830900"));
+        phoneList.add(new Phone(1, "Abdelali","0607080900"));
+        phoneList.add(new Phone(2, "Ahmed","0607080988"));
+        phoneList.add(new Phone(3, "Samir","06073830900"));
+        phoneList.add(new Phone(1, "Abdelali","0607080900"));
+        phoneList.add(new Phone(2, "Ahmed","0607080988"));
+        phoneList.add(new Phone(3, "Samir","06073830900"));
+        phoneList.add(new Phone(1, "Abdelali","0607080900"));
+        phoneList.add(new Phone(2, "Ahmed","0607080988"));
+        phoneList.add(new Phone(3, "Samir","06073830900"));
+
+
     }
 }
