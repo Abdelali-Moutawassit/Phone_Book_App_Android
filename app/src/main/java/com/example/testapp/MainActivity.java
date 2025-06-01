@@ -44,6 +44,6 @@ public class MainActivity extends AppCompatActivity {
         phoneList.add(new Phone(2, "Ahmed","0607080988"));
         phoneList.add(new Phone(3, "Samir","06073830900"));
 
-
+        PhoneBookAdapter phoneBookAdapter = new PhoneBookAdapter(phoneList);
     }
 }
