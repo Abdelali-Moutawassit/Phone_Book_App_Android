@@ -1,6 +1,8 @@
 package com.example.testapp;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,5 +52,23 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView rvNumbers = findViewById(R.id.rv_numbers);
         rvNumbers.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false));
         rvNumbers.setAdapter(phoneBookAdapter);
+
+        EditText edtName = findViewById(R.id.edt_name);
+        EditText edtPhone = findViewById(R.id.edt_phone);
+        Button btnSave = findViewById(R.id.btn_save);
+        // Listener du bouton Save
+        btnSave.setOnClickListener(v -> {
+            String name = edtName.getText().toString().trim();
+            String phone = edtPhone.getText().toString().trim();
+
+            if (!name.isEmpty() && !phone.isEmpty()) {
+                Phone newPhone = new Phone(phoneList.size() + 1, name, phone);
+                phoneList.add(newPhone);
+                phoneBookAdapter.notifyItemInserted(phoneList.size() - 1);
+
+                edtName.setText("");
+                edtPhone.setText("");
+            }
+            });
     }
 }
